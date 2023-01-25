@@ -103,4 +103,15 @@ public class NombreRomainTest {
                 assertEquals("IX", nombreRomain);
                 
             }
+            @Test
+            public void Test10() {
+                 // ETANT DONNE le chiffre 10
+                 int chiffreArabe =10;
+                 //QUAND on le convertir en nombre romain
+                 String nombreRomain = NombreRomain_I1.Convertir(chiffreArabe);
+         
+                 assertEquals("X", nombreRomain);
+                 
+             }
+
 }
