@@ -33,5 +33,14 @@ public class NombreRomainTest {
          
      }
 
-
+     @Test
+     public void Test3() {
+          // ETANT DONNE le chiffre 3
+          int chiffreArabe =3;
+          //QUAND on le convertir en nombre romain
+          String nombreRomain = NombreRomain_I1.Convertir(chiffreArabe);
+  
+          assertEquals("III", nombreRomain);
+          
+      }
 }
