@@ -3,18 +3,23 @@ package src;
 public class NombreRomain_I1 {
 
     public static String Convertir(int nombreArabe) {
-        String res;
-        if (nombreArabe % 5 == 0) {
-            res = "V";
-        } else {
-            if (nombreArabe % 5 == 4) {
-                res = "IV";
+        int rest = nombreArabe;
+        String res="";
+        do {
+
+            if (rest >= 5 ) {
+                res += "V";
+                rest-=5;
             } else {
-
-                res = "I".repeat(nombreArabe);
+                if (rest % 5 == 4) {
+                    res += "IV";
+                    rest-=4;
+                } else {
+                    res += "I".repeat(rest);
+                    rest-=rest;
+                }
             }
-        }
-
+        } while (rest != 0 | rest<0);
         return res;
     }
 }
